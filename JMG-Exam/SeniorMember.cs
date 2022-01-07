@@ -2,9 +2,9 @@
 
 namespace JMG_Exam
 {
-    internal class JuniorMember : Member
+    internal class SeniorMember : Member
     {
-        public string MemberType = "Junior Member";
+        public string MemberType = "Senior Member";
         public decimal Fee { get; set; }
 
         //Calculates members fees based upon their payment type
@@ -21,7 +21,7 @@ namespace JMG_Exam
             else
             {
                 double dFee = Double.Parse(Fee.ToString());
-                return Convert.ToDecimal(dFee * 0.5);
+                return Convert.ToDecimal(dFee * 0.75);
             }
 
             //In case of error

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JMG_Exam
 {
     //Enum for payment schedule
-    public enum PaymentSchedule { Annual, Biannual, Monthly}
+    public enum PaymentSchedule { Annual, Biannual, Monthly }
     internal class Member
     {
         //Properties for a member
@@ -30,7 +26,7 @@ namespace JMG_Exam
             this.Fee = Fee;
             this.PaymentType = paymentSchedule;
         }
-        
+
 
         //Returns the members details as a string for the member details text block
         public string MemberDetaills()
@@ -42,7 +38,7 @@ namespace JMG_Exam
         //Calculates members fees based upon their payment type
         internal decimal CalculateFees()
         {
-            if(PaymentType == PaymentSchedule.Monthly)
+            if (PaymentType == PaymentSchedule.Monthly)
             {
                 return Fee / 12;
             }
@@ -58,14 +54,14 @@ namespace JMG_Exam
             //In case of error
             return 9999;
         }
-        
+
         //Calculates the renewal date
         internal DateTime RenewalDate()
         {
             DateTime dt = DateTime.Now;
             return dt;
         }
-        
+
         //Calculates days to renewal
         internal int DaysToRenewal()
         {
