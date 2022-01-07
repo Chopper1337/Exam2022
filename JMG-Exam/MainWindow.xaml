@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JMG_Exam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
+        <ListBox x:Name="lstbxList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,61,523,116"/>
+        <Label Content="Member List" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Member Details" HorizontalAlignment="Left" Margin="362,38,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" GroupName="rbGroup"/>
+        <RadioButton x:Name="rbReg" Content="Regular" HorizontalAlignment="Left" Margin="59,344,0,0" VerticalAlignment="Top" GroupName="rbGroup"/>
+        <RadioButton x:Name="rbSenior" Content="Senior" HorizontalAlignment="Left" Margin="138,344,0,0" VerticalAlignment="Top" GroupName="rbGroup"/>
+        <RadioButton x:Name="rbJunior" Content="Junior" HorizontalAlignment="Left" Margin="209,344,0,0" VerticalAlignment="Top" GroupName="rbGroup"/>
+        <TextBlock x:Name="txblkMemberDetails" HorizontalAlignment="Left" Margin="362,65,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="253" Width="208"/>
 
     </Grid>
 </Window>
